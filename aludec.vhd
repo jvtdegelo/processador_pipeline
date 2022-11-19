@@ -21,7 +21,7 @@ begin
       when "00" => ALUControl <= "000"; -- addition
       when "01" => ALUControl <= "001"; -- subtraction
       when others => case funct3 is -- R–type or I–type ALU
-        when "000" = if RtypeSub = '1' then
+        when "000" => if RtypeSub = '1' then
             ALUControl <= "001"; -- sub
           else
             ALUControl <= "000"; -- add, addi

@@ -20,6 +20,7 @@ architecture test of testbench is
 begin
 -- instantiate device to be tested
   dut: top port map(clk, reset, WriteData, DataAdr, MemWrite);
+  
   -- Generate clock with 10 ns period
   process 
   begin
