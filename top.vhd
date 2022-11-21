@@ -16,7 +16,7 @@ architecture test of top is
       clk, reset: in STD_LOGIC;
       PC: out STD_LOGIC_VECTOR(31 downto 0);
       Instr: in STD_LOGIC_VECTOR(31 downto 0);
-      MemWrite: out STD_LOGIC;
+      MemWrite: buffer STD_LOGIC;
       ALUResult, WriteData: out STD_LOGIC_VECTOR(31 downto 0);
       ReadData: in STD_LOGIC_VECTOR(31 downto 0)
     );

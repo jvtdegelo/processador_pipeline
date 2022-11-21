@@ -29,18 +29,9 @@ begin
             end if;
         end if;
     end process;
-    process(a1, a2) 
-    begin
-        if (to_integer(a1) = 0) then 
-            rd1 <= X"00000000";
-        else 
-            rd1 <= mem(to_integer(a1));
-        end if;
-        
-        if (to_integer(a2) = 0) then 
-            rd2 <= X"00000000";
-        else 
-            rd2 <= mem(to_integer(a2));
-        end if;
-    end process;
+    rd1 <=  X"00000000" when to_integer(a1) = 0 else
+            mem(to_integer(a1));
+
+    rd2 <=  X"00000000" when to_integer(a2) = 0 else
+            mem(to_integer(a2));
 end;

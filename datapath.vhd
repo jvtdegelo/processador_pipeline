@@ -18,7 +18,7 @@ entity datapath is
 
     ALUResultM  : buffer STD_LOGIC_VECTOR(31 downto 0); 
     WriteDataM  : out STD_LOGIC_VECTOR(31 downto 0);
-    MemWriteM   : out STD_LOGIC;
+    MemWriteM   : buffer STD_LOGIC;
     InstrD      : buffer STD_LOGIC_VECTOR(31 downto 0);
     PC          : buffer STD_LOGIC_VECTOR(31 downto 0)
   );
@@ -238,7 +238,7 @@ architecture struct of datapath is
   end component;
 
   signal StallF : std_logic;
-  signal PCNext, PCPlus4, PCTarget: STD_LOGIC_VECTOR(31 downto 0);
+  signal PCNext, PCPlus4: STD_LOGIC_VECTOR(31 downto 0);
   
   signal PCD, PCPlus4D: STD_LOGIC_VECTOR(31 downto 0);
   signal Rs1D, Rs2D, RdD: STD_LOGIC_VECTOR(4 downto 0);
@@ -286,14 +286,16 @@ architecture struct of datapath is
   signal PCPlus4W     : STD_LOGIC_VECTOR(31 downto 0);
   signal ResultW      : STD_LOGIC_VECTOR(31 downto 0);
 
+  signal notclk, notstallf : std_logic;
 begin
   -- start F
+  notstallf <= not stallF;
   pcreg: flopenr 
     generic map(
       32
     ) 
     port map(
-      clk, reset, StallF, PCNext, PC
+      clk, reset, notstallf, PCNext, PC
     );
   
   pcadd4: adder port map(
@@ -305,7 +307,7 @@ begin
       32
     ) 
     port map(
-      PCPlus4, PCTarget, PCSrcE, PCNext
+      PCPlus4, PCTargetE, PCSrcE, PCNext
     );
 
   registerFD: regfd
@@ -319,9 +321,9 @@ begin
   -- End F
 
   -- Start D
-  
+  notclk <= not clk;
   rf: regfile port map(
-    clk, RegWriteW, InstrD(19 downto 15),
+    notclk, RegWriteW, InstrD(19 downto 15),
     InstrD(24 downto 20), RdW,
     ResultW, RD1D, RD2D
   );

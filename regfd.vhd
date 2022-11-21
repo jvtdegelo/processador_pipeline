@@ -31,7 +31,7 @@ begin
             instrD <= (others => '0');
             PCD <= (others => '0');
             PCPlus4D <= (others => '0');
-        elsif en = '1' then
+        elsif en = '0' then
             instrD <= instrF;
             PCD <= PCF;
             PCPlus4D <= PCPlus4F;

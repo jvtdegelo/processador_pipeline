@@ -6,7 +6,7 @@ entity riscvsingle is
     clk, reset:  in STD_LOGIC;
     PC: out STD_LOGIC_VECTOR(31 downto 0);
     Instr: in STD_LOGIC_VECTOR(31 downto 0);
-    MemWrite: out STD_LOGIC;
+    MemWrite: buffer STD_LOGIC;
     ALUResult, WriteData: out STD_LOGIC_VECTOR(31 downto 0);
     ReadData: in STD_LOGIC_VECTOR(31 downto 0)
   );
@@ -44,7 +44,7 @@ architecture struct of riscvsingle is
 
       ALUResultM  : buffer STD_LOGIC_VECTOR(31 downto 0); 
       WriteDataM  : out STD_LOGIC_VECTOR(31 downto 0);
-      MemWriteM   : out STD_LOGIC;
+      MemWriteM   : buffer STD_LOGIC;
       InstrD      : buffer STD_LOGIC_VECTOR(31 downto 0);
       PC          : buffer STD_LOGIC_VECTOR(31 downto 0)
     );

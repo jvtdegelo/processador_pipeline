@@ -10,7 +10,7 @@ architecture test of testbench is
     port(
       clk, reset: in STD_LOGIC;
       WriteData, DataAdr: out STD_LOGIC_VECTOR(31 downto 0);
-      MemWrite: out STD_LOGIC
+      MemWrite: buffer STD_LOGIC
     );
   end component;
 
