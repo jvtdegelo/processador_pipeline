@@ -1,0 +1,185 @@
+C:/Users/DELL/Documents/POLI/2022/OAC/processador/tesbench.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/tesbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD_UNSIGNED
+-- Compiling entity testbench
+-- Compiling architecture test of testbench
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/controller.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/controller.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity controller
+-- Compiling architecture struct of controller
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/mux2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/mux2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2
+-- Compiling architecture behave of mux2
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/mux3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/mux3.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux3
+-- Compiling architecture behave of mux3
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/regfile.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/regfile.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD_UNSIGNED
+-- Compiling entity regfile
+-- Compiling architecture behave of regfile
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/aludec.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/aludec.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity aludec
+-- Compiling architecture behave of aludec
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/flopenr.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/flopenr.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity flopenr
+-- Compiling architecture asynchronous of flopenr
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/datapath.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/datapath.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity datapath
+-- Compiling architecture struct of datapath
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/adder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD_UNSIGNED
+-- Compiling entity adder
+-- Compiling architecture behave of adder
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/imem.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/imem.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD_UNSIGNED
+-- Loading package std_logic_textio
+-- Compiling entity imem
+-- Compiling architecture behave of imem
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/hazardunit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/hazardunit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity hazardunit
+-- Compiling architecture arch of hazardunit
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/top.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/top.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD_UNSIGNED
+-- Compiling entity top
+-- Compiling architecture test of top
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/dmem.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/dmem.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD_UNSIGNED
+-- Compiling entity dmem
+-- Compiling architecture behave of dmem
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/regde.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/regde.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity regde
+-- Compiling architecture asynchronous of regde
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/regfd.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/regfd.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity regfd
+-- Compiling architecture asynchronous of regfd
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/regem.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/regem.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity regem
+-- Compiling architecture asynchronous of regem
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/extend.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/extend.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity extend
+-- Compiling architecture behave of extend
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/maindec.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/maindec.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity maindec
+-- Compiling architecture behave of maindec
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/regmw.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/regmw.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity regmw
+-- Compiling architecture asynchronous of regmw
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/alu.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/alu.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity alu
+-- Compiling architecture arch of alu
+
+} {} {}} C:/Users/DELL/Documents/POLI/2022/OAC/processador/flopr.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/Documents/POLI/2022/OAC/processador/flopr.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity flopr
+-- Compiling architecture asynchronous of flopr
+
+} {} {}}

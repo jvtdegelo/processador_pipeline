@@ -5,14 +5,15 @@ entity controller is
   port(
     op:in STD_LOGIC_VECTOR(6 downto 0);
     funct3: in STD_LOGIC_VECTOR(2 downto 0);
-    funct7b5, Zero: in STD_LOGIC;
-    ResultSrc: out STD_LOGIC_VECTOR(1 downto 0);
-    MemWrite: out STD_LOGIC; 
-    PCSrc, ALUSrc: out STD_LOGIC;
-    RegWrite: out STD_LOGIC;
-    Jump: buffer STD_LOGIC;
-    ImmSrc: out STD_LOGIC_VECTOR(1 downto 0);
-    ALUControl:out STD_LOGIC_VECTOR(2 downto 0)
+    funct7b5: in STD_LOGIC;
+    RegWriteD: out STD_LOGIC;
+    ResultSrcD: out STD_LOGIC_VECTOR(1 downto 0);
+    MemWriteD: out STD_LOGIC; 
+    JumpD: out STD_LOGIC;
+    BranchD: out std_logic;
+    ALUControlD:out STD_LOGIC_VECTOR(2 downto 0);
+    ALUSrcD: out STD_LOGIC;    
+    ImmSrcD: out STD_LOGIC_VECTOR(1 downto 0)
   );
 end;
 
@@ -39,12 +40,12 @@ architecture struct of controller is
   end component;
   
   signal ALUOp: STD_LOGIC_VECTOR(1 downto 0);
-  signal Branch: STD_LOGIC;
 begin
   md: maindec port map(
-    op, ResultSrc, MemWrite, Branch,
-    ALUSrc, RegWrite, Jump, ImmSrc, ALUOp
+    op, ResultSrcD, MemWriteD, BranchD,
+    ALUSrcD, RegWriteD, JumpD, ImmSrcD, ALUOp
   );
-  ad: aludec port map(op(5), funct3, funct7b5, ALUOp, ALUControl);
-  PCSrc <= (Branch and Zero) or Jump;
+  ad: aludec port map(
+    op(5), funct3, funct7b5, ALUOp, ALUControlD
+  );
 end;

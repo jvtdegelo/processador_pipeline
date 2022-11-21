@@ -13,47 +13,57 @@ entity riscvsingle is
 end entity;
 
 architecture struct of riscvsingle is
-  component controller
+  component controller is
     port(
       op:in STD_LOGIC_VECTOR(6 downto 0);
-      funct3:in STD_LOGIC_VECTOR(2 downto 0);
-      funct7b5, Zero:in STD_LOGIC;
-      ResultSrc:out STD_LOGIC_VECTOR(1 downto 0);
-      MemWrite:out STD_LOGIC;
-      PCSrc, ALUSrc: out STD_LOGIC;
-      RegWrite, Jump: out STD_LOGIC;
-      ImmSrc: out STD_LOGIC_VECTOR(1 downto 0);
-      ALUControl:out STD_LOGIC_VECTOR(2 downto 0)
+      funct3: in STD_LOGIC_VECTOR(2 downto 0);
+      funct7b5: in STD_LOGIC;
+      RegWriteD: out STD_LOGIC;
+      ResultSrcD: out STD_LOGIC_VECTOR(1 downto 0);
+      MemWriteD: out STD_LOGIC; 
+      JumpD: out STD_LOGIC;
+      BranchD: out std_logic;
+      ALUControlD:out STD_LOGIC_VECTOR(2 downto 0);
+      ALUSrcD: out STD_LOGIC;    
+      ImmSrcD: out STD_LOGIC_VECTOR(1 downto 0)
     );
   end component;
   component datapath
-    port(
-      clk, reset: in STD_LOGIC;
-      ResultSrc:in STD_LOGIC_VECTOR(1 downto 0);
-      PCSrc, ALUSrc:in STD_LOGIC;
-      RegWrite:in STD_LOGIC;
-      ImmSrc:in STD_LOGIC_VECTOR(1 downto 0);
-      ALUControl:in STD_LOGIC_VECTOR(2 downto 0);
-      Zero:out STD_LOGIC;
-      PC:out STD_LOGIC_VECTOR(31 downto 0);
-      Instr:in STD_LOGIC_VECTOR(31 downto 0);
-      ALUResult, WriteData: out STD_LOGIC_VECTOR(31 downto 0);
-      ReadData:in STD_LOGIC_VECTOR(31 downto 0)
+    port( 
+      clk, reset  :  in STD_LOGIC;
+      Instr       :  in STD_LOGIC_VECTOR(31 downto 0);
+      ReadDataM   :  in STD_LOGIC_VECTOR(31 downto 0);
+      RegWriteD   :  in STD_LOGIC;
+      ResultSrcD  :  in STD_LOGIC_VECTOR(1 downto 0);
+      MemWriteD   :  in STD_LOGIC;
+      ALUSrcD     :  in STD_LOGIC;
+      JumpD       :  in STD_LOGIC;
+      BranchD     :  in STD_LOGIC;
+      ALUControlD :  in STD_LOGIC_VECTOR(2 downto 0);
+      ImmSrcD     :  in STD_LOGIC_VECTOR(1 downto 0);
+
+      ALUResultM  : buffer STD_LOGIC_VECTOR(31 downto 0); 
+      WriteDataM  : out STD_LOGIC_VECTOR(31 downto 0);
+      MemWriteM   : out STD_LOGIC;
+      InstrD      : buffer STD_LOGIC_VECTOR(31 downto 0);
+      PC          : buffer STD_LOGIC_VECTOR(31 downto 0)
     );
   end component;
-  signal ALUSrc, RegWrite, Jump, Zero, PCSrc: STD_LOGIC;
-  signal ResultSrc, ImmSrc: STD_LOGIC_VECTOR(1 downto 0);
-  signal ALUControl: STD_LOGIC_VECTOR(2 downto 0);
+  signal RegWriteD, MemWriteD, ALUSrcD, JumpD, BranchD: STD_LOGIC;
+  signal ResultSrcD, ImmSrcD: STD_LOGIC_VECTOR(1 downto 0);
+  signal ALUControlD: STD_LOGIC_VECTOR(2 downto 0);
+  signal InstrD: STD_LOGIC_VECTOR(31 downto 0);
 begin
   c: controller port map(
-    Instr(6 downto 0), Instr(14 downto 12),
-    Instr(30), Zero, ResultSrc, MemWrite,
-    PCSrc, ALUSrc, RegWrite, Jump,
-    ImmSrc, ALUControl
+    InstrD(6 downto 0), InstrD(14 downto 12),
+    InstrD(30), RegWriteD, ResultSrcD, MemWriteD,
+    JumpD, BranchD, ALUControlD, ALUSrcD, ImmSrcD
   );
   dp: datapath port map(
-    clk, reset, ResultSrc, PCSrc, ALUSrc,
-    RegWrite, ImmSrc, ALUControl, Zero,
-    PC, Instr, ALUResult, WriteData,ReadData
+    clk, reset, Instr, ReadData, 
+    RegWriteD, ResultSrcD, MemWriteD, 
+    ALUSrcD, JumpD, BranchD, ALUControlD, 
+    ImmSrcD, ALUResult, WriteData,
+    MemWrite, InstrD, PC
   );
 end;
