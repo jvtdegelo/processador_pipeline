@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
-use IEEE.NUMERIC_STD_UNSIGNED.all;
+use IEEE.numeric_std.all;
 
 entity testbench is
 end;
@@ -43,9 +43,9 @@ begin
   process(clk) 
   begin
     if(clk'event and clk = '0' and MemWrite = '1') then
-      if(to_integer(DataAdr) = 100 and to_integer(writedata) = 25) then
+      if(to_integer(unsigned(DataAdr)) = 100 and to_integer(unsigned(writedata)) = 25) then
         report "NO ERRORS: Simulation succeeded" severity failure;
-      elsif (DataAdr /= 96) then
+      elsif (to_integer(unsigned(DataAdr)) /= 96) then
         report "Simulation failed" severity failure;
       end if;
     end if;

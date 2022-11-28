@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
-use IEEE.NUMERIC_STD_UNSIGNED.all;
+use IEEE.numeric_std.all;
 
 entity regfile is
     port(
@@ -25,13 +25,13 @@ begin
     begin
         if rising_edge(clk) then
             if we3 = '1' then 
-                mem(to_integer(a3)) <= wd3;
+                mem(to_integer(unsigned(a3))) <= wd3;
             end if;
         end if;
     end process;
-    rd1 <=  X"00000000" when to_integer(a1) = 0 else
-            mem(to_integer(a1));
+    rd1 <=  X"00000000" when to_integer(unsigned(a1)) = 0 else
+            mem(to_integer(unsigned(a1)));
 
-    rd2 <=  X"00000000" when to_integer(a2) = 0 else
-            mem(to_integer(a2));
+    rd2 <=  X"00000000" when to_integer(unsigned(a2)) = 0 else
+            mem(to_integer(unsigned(a2)));
 end;

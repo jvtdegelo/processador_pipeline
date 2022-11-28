@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
-use IEEE.NUMERIC_STD_UNSIGNED.all;
+use IEEE.numeric_std.all;
 
 entity adder is
   port(
@@ -11,5 +11,5 @@ end;
 
 architecture behave of adder is
 begin
-  y <= a + b;
+  y <=  std_logic_vector(unsigned(a) + unsigned(b));
 end;
